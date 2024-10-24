@@ -1,19 +1,21 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+    <h1>Movies List</h1>
+    <div class="movies">
         @foreach($movies as $movie)
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $movie->title }}</h5>
-                    <p class="card-text">Description: {{ $movie->description }}</p>
-                    <p class="card-text">Release Year: {{ $movie->release_year }}</p>
-                </div>
+            <div class="movie-card">
+                <h2>{{ $movie->title }}</h2>
+                <p>{{ $movie->description }}</p>
+                <p>Release Year: {{ $movie->release_year }}</p>
             </div>
-        </div>
         @endforeach
     </div>
-</div>
-@endsection
+</body>
+</html>
+
