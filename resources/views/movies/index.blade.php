@@ -13,6 +13,7 @@
                 <h2>{{ $movie->title }}</h2>
                 <p>{{ $movie->description }}</p>
                 <p>Release Year: {{ $movie->release_year }}</p>
+                <a href="{{ route('movies.show', $movie->id) }}">View Details</a>
             </div>
         @endforeach
     </div>
